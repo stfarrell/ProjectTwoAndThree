@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="RouStyle.css" type="text/css" />
+        <link rel="stylesheet" href="radio.css" type="text/css" />
+    </head>
+    <body id="physBody">
+        <nav id="mainlink">
+            <a href="ES_Rou.html">Earth Science Roulette!</a>
+            <a href="Alg1.html">Algebra 1 Roulette!</a>
+        </nav>
+        <h1 class="center">Physics Roulette!</h1>
+        <p id = "directions" class="center">Directions:  Click the button!</p>
+        <a href="http://www.p12.nysed.gov/assessment/reftable/physics-rt/physics06tbl.pdf" target="_blank" id="referenceTable" class="center">Reference Tables</a>
+        
+        <div id="progress">0 out of 100</div>
+        
+        <div id="scorediv">Score
+            <!--<button id="sendScore">Send Score!</button>-->
+        </div>
+        
+        <button id = "btn">Quiz Me!</button>
+        <div id = "problem"></div>
+        <div id="checkboxes" class="hidden">
+            <form>
+    
+                <label for "ans1"><input type = "radio" id="ans1" name = "answer" value = "1" class="ans">(1)<span class="checkmark"></span></label>
+                
+                <input type = "radio" id="ans2" name = "answer" value = "2" class="ans">
+                <label for "ans2">(2)<span class="checkmark"></span></label>
+                
+                <input type = "radio" id="ans3" name = "answer" value = "3" class="ans">
+                <label for "ans3" class="">(3)<span class="checkmark"></span></label>
+                
+                <input type = "radio" id="ans4" name = "answer" value = "4" class="ans">
+                <label for "ans4" class="">(4)<span class="checkmark"></span></label>
+    
+            </form>
+            
+            
+            
+        </div>
+        <div id = "submit">
+            <button type = "submit" id = "submitbtn">Submit</button>
+        </div>
+
+        <div id="results"></div>
+        
+        <button id="vidbtn" class="hidden">Video Solution</button>
+        
+        <div id="videoSolution"></div>
+
+        <button id="another" class="hidden">Try another just like it!</button>
+
+        <div id="greatjob"></div>
+
+    </body>
+    <script type="text/javascript" src="RouDyn.js"></script>
+</html>

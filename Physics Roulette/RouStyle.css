@@ -1,0 +1,268 @@
+#physBody {
+    background-image: url("space.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+nav {
+    color: white;
+    background-color: #2980B9;
+}
+
+#directions {
+    font-size: 30px;
+    
+}
+
+#btn {
+    color: black;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+    background-color: #2980B9;
+    display: block;
+    width: auto;
+    height: auto;
+    font-size: 50px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+#referenceTable {
+    color: white;
+    font-size: 30px;
+}
+
+#problem {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+}
+
+.center {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+    padding:30px;
+}
+
+/*.ans {*/
+/*    border-style: double;*/
+/*    border-color: orange;*/
+/*}*/
+
+#submitbtn {
+    color: black;
+    background-color: #2980B9;
+    display: block;
+    width: auto;
+    height: auto;
+    font-size: 50px;
+    padding: 10px;
+    margin: 0 auto;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#results {
+    font-size: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: bold;
+
+}
+
+#scorediv {
+    padding: 20px;
+    background-color: #5D6D7E;
+    width: 25%;
+    
+    font-family: Helvitica;
+    font-size: 2em;
+    border-style: solid;
+    border-color: black;
+    border-bottom-width: 5px;
+    border-radius: 20px;
+    color: black;
+}
+
+
+
+
+
+/*Now is the Earth Science Page!*/
+
+#ESbody {
+    background-image: url("Earth.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#ESdirections {
+    font-size: 25px;
+}
+
+#ESbtn {
+    color: black;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+    background-color: #2980B9;
+    display: block;
+    width: auto;
+    height: auto;
+    font-size: 50px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+#ESproblem {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+}
+
+#ESsubmitbtn {
+    color: black;
+    background-color: #2980B9;
+    display: block;
+    width: auto;
+    height: auto;
+    font-size: 50px;
+    padding: 10px;
+    margin: 0 auto;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+}
+
+#ESscorediv {
+    padding: 20px;
+    background-color: #5D6D7E;
+    width: 25%;
+    font-family: Helvitica;
+    font-size: 2em;
+    border-style: solid;
+    border-color: black;
+    border-bottom-width: 5px;
+    border-radius: 20px;
+    color: black;
+}
+
+#ESresults {
+    font-size: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: bold;
+
+}
+
+
+
+
+/* Algebra 1 stuff */
+
+#alg1Body {
+    background-image: url("mathpic.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: pink;
+}
+
+#alg1directions {
+    font-size: 25px;
+}
+
+#alg1btn {
+    color: black;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+    background-color: #2980B9;
+    display: block;
+    width: auto;
+    height: auto;
+    font-size: 50px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+#alg1problem {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+}
+
+#alg1submitbtn {
+    color: black;
+    background-color: #2980B9;
+    display: block;
+    width: auto;
+    height: auto;
+    font-size: 50px;
+    padding: 10px;
+    margin: 0 auto;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+}
+
+#alg1scorediv {
+    padding: 20px;
+    background-color: #5D6D7E;
+    width: 25%;
+    font-family: Helvitica;
+    font-size: 2em;
+    border-style: solid;
+    border-color: black;
+    border-bottom-width: 5px;
+    border-radius: 20px;
+    color: black;
+}
+
+#alg1results {
+    font-size: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: pinks;
+    font-weight: bold;
+
+}
+
+#winner {
+    height: 200px;
+}
+
+#vidbtn {
+    color: black;
+    background-color: #2980B9;
+    display: block;
+    width: auto;
+    height: auto;
+    font-size: 25px;
+    padding: 10px;
+    margin: 0 auto;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+}
+

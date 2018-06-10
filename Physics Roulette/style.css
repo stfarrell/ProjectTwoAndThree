@@ -1,0 +1,14 @@
+#bestdiv {
+    position: absolute;
+    top: 50px;
+    left: 120px;
+    width: 300px;
+    height: 100px;
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 2rem;
+    background-color: slategray;
+    border: 3px solid black;
+}
