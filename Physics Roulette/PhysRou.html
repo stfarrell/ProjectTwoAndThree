@@ -1,59 +1,165 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" href="RouStyle.css" type="text/css" />
-        <link rel="stylesheet" href="radio.css" type="text/css" />
-    </head>
-    <body id="physBody">
-        <nav id="mainlink">
-            <a href="ES_Rou.html">Earth Science Roulette!</a>
-            <a href="Alg1.html">Algebra 1 Roulette!</a>
-        </nav>
-        <h1 class="center">Physics Roulette!</h1>
-        <p id = "directions" class="center">Directions:  Click the button!</p>
-        <a href="http://www.p12.nysed.gov/assessment/reftable/physics-rt/physics06tbl.pdf" target="_blank" id="referenceTable" class="center">Reference Tables</a>
-        
-        <div id="progress">0 out of 100</div>
-        
-        <div id="scorediv">Score
-            <!--<button id="sendScore">Send Score!</button>-->
+
+<head>
+    <!--Firebase Script-->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAfJW2wgutaKy3eX75RhJ_LspRSIie5Qcg",
+            authDomain: "my-project-1529327526451.firebaseapp.com",
+            databaseURL: "https://my-project-1529327526451.firebaseio.com",
+            projectId: "my-project-1529327526451",
+            storageBucket: "my-project-1529327526451.appspot.com",
+            messagingSenderId: "500359221964"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <!--More Firebase Fun!-->
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase-functions.js"></script>
+
+    <link rel="stylesheet" href="RouStyle.css" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!--Add Google Icons Library-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body id="physBody">
+    <!--<nav id="mainlink" class="blue darken-2">-->
+    <!--    <a href="ES_Rou.html">Earth Science Roulette!</a>-->
+    <!--    <a href="Alg1.html">Algebra 1 Roulette!</a>-->
+    <!--</nav>-->
+
+    <nav>
+        <div class="nav-wrapper blue darken-3 z-depth-4">
+            <a href="#" class="brand-logo"><i class="material-icons large">all_inclusive</i>HSWC Regents Games</a>
+
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="ES_Rou.html"><i class="material-icons large left">public</i>Earth Science</a></li>
+                <li><a href="Alg1.html"><i class="material-icons large left">grid_on</i>Algebra 1</a></li>
+                <li><a href="Alg2.html"><i class="material-icons large left">grain</i>Algebra 2</a></li>
+                <li><a href="Geo.html"><i class="material-icons large left">signal_cellular_4_bar</i>Geometry</a></li>
+                <li><a href="Living.html"><i class="material-icons large left">filter_vintage</i>Living Environment</a></li>
+                <li><a href="PhysRou.html"><i class="material-icons large left">directions_bike</i>Physics</a></li>
+
+
+            </ul>
         </div>
-        
-        <button id = "btn">Quiz Me!</button>
-        <div id = "problem"></div>
-        <div id="checkboxes" class="hidden">
-            <form>
-    
-                <label for "ans1"><input type = "radio" id="ans1" name = "answer" value = "1" class="ans">(1)<span class="checkmark"></span></label>
-                
-                <input type = "radio" id="ans2" name = "answer" value = "2" class="ans">
-                <label for "ans2">(2)<span class="checkmark"></span></label>
-                
-                <input type = "radio" id="ans3" name = "answer" value = "3" class="ans">
-                <label for "ans3" class="">(3)<span class="checkmark"></span></label>
-                
-                <input type = "radio" id="ans4" name = "answer" value = "4" class="ans">
-                <label for "ans4" class="">(4)<span class="checkmark"></span></label>
-    
-            </form>
-            
-            
-            
-        </div>
-        <div id = "submit">
-            <button type = "submit" id = "submitbtn">Submit</button>
-        </div>
+    </nav>
 
-        <div id="results"></div>
-        
-        <button id="vidbtn" class="hidden">Video Solution</button>
-        
-        <div id="videoSolution"></div>
 
-        <button id="another" class="hidden">Try another just like it!</button>
+    <!--<nav>-->
+    <!--     navbar content here  -->
+    <!--    Mr. Farrell's Class-->
+    <!--</nav>-->
 
-        <div id="greatjob"></div>
+    <!--<ul id="slide-out" class="sidenav">-->
+    <!--    <li>-->
+    <!--        <div class="user-view">-->
+    <!--            <div class="background">-->
+    <!--                <img src="images/office.jpg">-->
+    <!--            </div>-->
+    <!--            <a href="#user"><img class="circle" src="images/yuna.jpg"></a>-->
+    <!--            <a href="#name"><span class="white-text name">John Doe</span></a>-->
+    <!--            <a href="#email"><span class="white-text email">jdandturk@gmail.com</span></a>-->
+    <!--        </div>-->
+    <!--    </li>-->
+    <!--    <li><a href="#!"><i class="material-icons">cloud</i>First Link With Icon</a></li>-->
+    <!--    <li><a href="#!">Second Link</a></li>-->
+    <!--    <li>-->
+    <!--        <div class="divider"></div>-->
+    <!--    </li>-->
+    <!--    <li><a class="subheader">Subheader</a></li>-->
+    <!--    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>-->
+    <!--</ul>-->
+    <!--<a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>-->
 
-    </body>
+    <h1 class="center disabled">Physics Roulette!</h1>
+    <p id="directions" class="center disabled">Directions: Click the button!</p>
+    <a href="http://www.p12.nysed.gov/assessment/reftable/physics-rt/physics06tbl.pdf" target="_blank" id="referenceTable" class="center">Reference Tables</a>
+
+    <div id="progress">0 out of 100</div>
+
+    <div id="scorediv">Score
+        <!--<button id="sendScore">Send Score!</button>-->
+    </div>
+
+    <button id="btn" class="btn blue darken-2 waves-effect">Quiz Me!</button>
+    <div id="problem"></div>
+
+    <div id="checkboxes" class="hidden">
+        <form action="#">
+            <p>
+                <label>
+        <input name="answer" type="radio" checked id="ans1" value="1" class="ans"/>
+        <span class="white-text">(1)</span>
+      </label>
+            </p>
+            <p>
+                <label>
+        <input name="answer" type="radio" id="ans2" value="2" class="ans"/>
+        <span class="white-text">(2)</span>
+      </label>
+            </p>
+            <p>
+                <label>
+        <input name="answer" type="radio" id="ans3" value="3" class="ans"/>
+        <span class="white-text">(3)</span>
+      </label>
+            </p>
+            <p>
+                <label>
+        <input name="answer" type="radio" class="white ans" id="ans4" value="4">
+        <span class="white-text">(4)</span>
+      </label>
+            </p>
+        </form>
+    </div>
+
+
+    <!--<div id="checkboxes" class="hidden">-->
+    <!--<form>-->
+
+    <!--    <label for "ans1"><input type = "radio" id="ans1" name = "answer" value = "1" class="ans">(1)<span class="checkmark"></span></label>-->
+
+    <!--    <input type="radio" id="ans2" name="answer" value="2" class="ans">-->
+    <!--    <label for "ans2">(2)<span class="checkmark"></span></label>-->
+
+    <!--    <input type="radio" id="ans3" name="answer" value="3" class="ans">-->
+    <!--    <label for "ans3" class="">(3)<span class="checkmark"></span></label>-->
+
+    <!--    <input type="radio" id="ans4" name="answer" value="4" class="ans">-->
+    <!--    <label for "ans4" class="">(4)<span class="checkmark"></span></label>-->
+
+    <!--</form>-->
+
+
+
+    <!--</div>-->
+    <div id="submit">
+        <button id="submitbtn" class="btn blue darken-2 waves-effect disabled">Submit</button>
+    </div>
+
+    <div id="results"></div>
+
+    <button id="vidbtn" class="hidden">Video Solution</button>
+
+    <div id="videoSolution"></div>
+
+    <button id="another" class="hidden">Try another just like it!</button>
+
+    <div id="greatjob"></div>
+
+
+
     <script type="text/javascript" src="RouDyn.js"></script>
+
+</body>
+
 </html>

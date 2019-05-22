@@ -6,10 +6,10 @@
     color: white;
 }
 
-nav {
-    color: white;
-    background-color: #2980B9;
-}
+/*nav {*/
+/*    color: white;*/
+/*    background-color: #2980B9;*/
+/*}*/
 
 #directions {
     font-size: 30px;
@@ -266,3 +266,71 @@ nav {
     border-radius: 20px;
 }
 
+/*Geometry*/
+
+#Geobtn {
+    color: black;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+    background-color: #2980B9;
+    display: block;
+    width: auto;
+    height: auto;
+    font-size: 50px;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+#GeoBody {
+    background-image: url("GeometryPic.JPG");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#Georesults {
+    font-size: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    font-weight: bold;
+
+}
+
+#geoScorDiv {
+    padding: 20px;
+    background-color: #5D6D7E;
+    width: 25%;
+    
+    font-family: Helvitica;
+    font-size: 2em;
+    border-style: solid;
+    border-color: black;
+    border-bottom-width: 5px;
+    border-radius: 20px;
+    color: black;
+}
+
+#Geosubmitbtn {
+    color: black;
+    background-color: #2980B9;
+    display: block;
+    width: auto;
+    height: auto;
+    font-size: 50px;
+    padding: 10px;
+    margin: 0 auto;
+    border-style: solid;
+    border-color: black;
+    border-radius: 20px;
+}
+
+#Geoproblem {
+    display: block;
+    margin: 0 auto;
+    width: auto;
+    height: auto;
+}

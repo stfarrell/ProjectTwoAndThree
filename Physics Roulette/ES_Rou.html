@@ -1,48 +1,74 @@
 <!DOCTYPE html>
 <html>
+<head>
     <link rel="stylesheet" href="RouStyle.css" type="text/css" />
-    <body id="ESbody">
-        <nav>
-            <a href="PhysRou.html">Physics Roulette!</a>
-            <a href="Alg1.html">Algebra 1 Roulette!</a>
-        </nav>
-        <h1 class="center">Earth Science Roulette!</h1>
-        <p id = "ESdirections" class="center">Directions:  Click the button!</p>
-        <a href="http://www.p12.nysed.gov/assessment/reftable/earthscience-rt/esrt2011-engr.pdf" target="_blank" id="referenceTable" class="center">Reference Tables</a>
-        
-        <div id="ESscorediv">Score
-            <!--<button id="sendScore">Send Score!</button>-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+    <!--Add Google Icons Library-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body id="ESbody">
+    <!--<nav>-->
+    <!--    <a href="PhysRou.html">Physics Roulette!</a>-->
+    <!--    <a href="Alg1.html">Algebra 1 Roulette!</a>-->
+    <!--</nav>-->
+
+    <nav>
+        <div class="nav-wrapper blue darken-3 z-depth-4">
+            <a href="#" class="brand-logo"><i class="material-icons large">all_inclusive</i>HSWC Regents Games</a>
+
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="ES_Rou.html"><i class="material-icons large left">public</i>Earth Science</a></li>
+                <li><a href="Alg1.html"><i class="material-icons large left">grid_on</i>Algebra 1</a></li>
+                <li><a href="Alg2.html"><i class="material-icons large left">grain</i>Algebra 2</a></li>
+                <li><a href="Geo.html"><i class="material-icons large left">signal_cellular_4_bar</i>Geometry</a></li>
+                <li><a href="Living.html"><i class="material-icons large left">filter_vintage</i>Living Environment</a></li>
+                <li><a href="PhysRou.html"><i class="material-icons large left">directions_bike</i>Physics</a></li>
+
+
+            </ul>
         </div>
-        
-        <button id="ESbtn">Quiz Me!</button>
-        <div id="ESproblems"></div>
-        <div id="EScheckboxes" class="hidden">
-            <form>
-    
-                <label for "ans1"><input type = "radio" id="ans1" name = "answer" value = "1" class="ans">(1)</label>
-                
-                <input type = "radio" id="ans2" name = "answer" value = "2" class="ans">
-                <label for "ans2">(2)</label>
-                
-                <input type = "radio" id="ans3" name = "answer" value = "3" class="ans">
-                <label for "ans3">(3)</label>
-                
-                <input type = "radio" id="ans4" name = "answer" value = "4" class="ans">
-                <label for "ans4">(4)</label>
-    
-            </form>
-            
-        </div>
-        <div id="ESsubmit">
-            <button type="submit" id="ESsubmitbtn">Submit</button>
-        </div>
+    </nav>
 
-        <div id="ESresults"></div>
+    <h1 class="center">Earth Science Roulette!</h1>
+    <p id="ESdirections" class="center">Directions: Click the button!</p>
+    <a href="http://www.p12.nysed.gov/assessment/reftable/earthscience-rt/esrt2011-engr.pdf" target="_blank" id="referenceTable" class="center">Reference Tables</a>
 
-       
+    <div id="ESscorediv">Score
+        <!--<button id="sendScore">Send Score!</button>-->
+    </div>
+
+    <button id="ESbtn">Quiz Me!</button>
+    <div id="ESproblems"></div>
+    <div id="EScheckboxes" class="hidden">
+        <form>
+
+            <label for "ans1"><input type = "radio" id="ans1" name = "answer" value = "1" class="ans">(1)</label>
+
+            <input type="radio" id="ans2" name="answer" value="2" class="ans">
+            <label for "ans2">(2)</label>
+
+            <input type="radio" id="ans3" name="answer" value="3" class="ans">
+            <label for "ans3">(3)</label>
+
+            <input type="radio" id="ans4" name="answer" value="4" class="ans">
+            <label for "ans4">(4)</label>
+
+        </form>
+
+    </div>
+    <div id="ESsubmit">
+        <button type="submit" id="ESsubmitbtn">Submit</button>
+    </div>
+
+    <div id="ESresults"></div>
 
 
 
-    </body>
-    <script type="text/javascript" src="ESjava.js"></script>
+
+
+</body>
+<script type="text/javascript" src="ESjava.js"></script>
+
 </html>
